@@ -1,0 +1,31 @@
+[package]
+name = "server-clone-bot"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+diesel = { version = "2.1.0", features = ["sqlite"] }
+diesel_migrations = { version = "2.1.0", features = ["sqlite"] }
+deadpool-diesel = { version = "0.4.1", features = ["sqlite", "rt_tokio_1", "serde"] }
+serde = { version = "1.0.166", features = ["derive"] }
+toml = "0.7.6"
+thiserror = "1.0.41"
+tokio = { version = "1.29.1", features = ["rt-multi-thread", "sync", "macros", "signal"] }
+tracing = "0.1.37"
+tracing-subscriber = "0.3.17"
+twilight-cache-inmemory = "0.15.2"
+twilight-gateway = "0.15.2"
+twilight-http = "0.15.2"
+twilight-model = "0.15.2"
+async-fs = "1.6.0"
+futures-lite = "1.13.0"
+either = "1.8.1"
+anyhow = "1.0.71"
+http = "0.2.9"
+twilight-validate = "0.15.1"
+deadpool = "0.9.5"
+reqwest = "0.11.18"
+regex = "1.9.1"
+serde_json = "1.0.103"

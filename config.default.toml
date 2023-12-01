@@ -1,0 +1,51 @@
+[system]
+duration_between_requests_secs = 0.75 # increase only if you're being ratelimited
+discord_token = "" # put your discord token here
+user_agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/114.0"
+database_url = "sqlite://./data.sqlite3"
+
+# one instance of a Guild configuration
+# -------------------------------------------------------
+[[guild]]
+src_guild_id = "" # insert the source guild ID here
+dest_guild_id = "" # insert the destination guild ID here
+default_webhook_username = "Captain Hook"
+# relay deletes of roles and channels
+relay_deletes = false
+# relay updates of roles and channels
+relay_updates = false
+# uncomment and change if you want to not clone roles
+clone_roles = true
+# blacklist used to ignore messages from given
+# Channels/Users/Roles
+# blacklist = [
+#     { type = "Channel", id = "CHANNEL_ID_TO_IGNORE" },
+#     { type = "User", id = "USER_ID_TO_IGNORE" },
+#     { type = "Role", id = "ROLE_ID_TO_IGNORE" },
+# ]
+
+
+[[guild.requirements]]
+min_embeds_amount = 0
+min_content_length = 0
+min_attachments_amount = 0
+
+
+[[guild.msg_settings]]
+# default value is false, if you don't want
+# usernames and profile pictures to carry over 
+# make this field false
+use_webhook_profile = true
+# remove attachments from copied messages
+remove_attachments = false
+mirror_messages_from_bots = true
+mirror_reply_messages = true
+# -------------------------------------------------------
+
+
+
+# second instance of a Guild configuration
+# -------------------------------------------------------
+# [[guild]]
+# ...
+# -------------------------------------------------------
